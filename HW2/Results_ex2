@@ -1,0 +1,299 @@
+### MODEL A ### 
+Epoch 1/15
+2021-05-08 22:32:21.855241: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 30 of 100
+2021-05-08 22:32:31.824194: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 63 of 100
+2021-05-08 22:32:41.735770: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 86 of 100
+2021-05-08 22:32:44.214952: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+200/200 [==============================] - 67s 336ms/step - loss: 1.1744 - sparse_categorical_accuracy: 0.5827 - val_loss: 0.6844 - val_sparse_categorical_accuracy: 0.7775
+Epoch 2/15
+200/200 [==============================] - 21s 103ms/step - loss: 0.6586 - sparse_categorical_accuracy: 0.7725 - val_loss: 0.4647 - val_sparse_categorical_accuracy: 0.8587
+Epoch 3/15
+200/200 [==============================] - 19s 93ms/step - loss: 0.5164 - sparse_categorical_accuracy: 0.8275 - val_loss: 0.3789 - val_sparse_categorical_accuracy: 0.8838
+Epoch 4/15
+200/200 [==============================] - 19s 94ms/step - loss: 0.4574 - sparse_categorical_accuracy: 0.8462 - val_loss: 0.3851 - val_sparse_categorical_accuracy: 0.8813
+Epoch 5/15
+200/200 [==============================] - 20s 99ms/step - loss: 0.3924 - sparse_categorical_accuracy: 0.8677 - val_loss: 0.3625 - val_sparse_categorical_accuracy: 0.8875
+Epoch 6/15
+200/200 [==============================] - 19s 95ms/step - loss: 0.3644 - sparse_categorical_accuracy: 0.8781 - val_loss: 0.3459 - val_sparse_categorical_accuracy: 0.8900
+Epoch 7/15
+200/200 [==============================] - 18s 91ms/step - loss: 0.3263 - sparse_categorical_accuracy: 0.8919 - val_loss: 0.2764 - val_sparse_categorical_accuracy: 0.9075
+Epoch 8/15
+200/200 [==============================] - 9s 47ms/step - loss: 0.2945 - sparse_categorical_accuracy: 0.9017 - val_loss: 0.2861 - val_sparse_categorical_accuracy: 0.9225
+Epoch 9/15
+200/200 [==============================] - 10s 49ms/step - loss: 0.2812 - sparse_categorical_accuracy: 0.9019 - val_loss: 0.2429 - val_sparse_categorical_accuracy: 0.9250
+Epoch 10/15
+200/200 [==============================] - 9s 46ms/step - loss: 0.2529 - sparse_categorical_accuracy: 0.9095 - val_loss: 0.2773 - val_sparse_categorical_accuracy: 0.9100
+Epoch 11/15
+200/200 [==============================] - 9s 46ms/step - loss: 0.2294 - sparse_categorical_accuracy: 0.9225 - val_loss: 0.2300 - val_sparse_categorical_accuracy: 0.9125
+Epoch 12/15
+200/200 [==============================] - 9s 46ms/step - loss: 0.2234 - sparse_categorical_accuracy: 0.9253 - val_loss: 0.2286 - val_sparse_categorical_accuracy: 0.9325
+Epoch 13/15
+200/200 [==============================] - 9s 46ms/step - loss: 0.1975 - sparse_categorical_accuracy: 0.9317 - val_loss: 0.2275 - val_sparse_categorical_accuracy: 0.9312
+Epoch 14/15
+200/200 [==============================] - 9s 46ms/step - loss: 0.1971 - sparse_categorical_accuracy: 0.9334 - val_loss: 0.2358 - val_sparse_categorical_accuracy: 0.9300
+Epoch 15/15
+200/200 [==============================] - 9s 46ms/step - loss: 0.1725 - sparse_categorical_accuracy: 0.9430 - val_loss: 0.2192 - val_sparse_categorical_accuracy: 0.9237
+
+WEIGHT CLUSTERING
+Epoch 1/10
+200/200 [==============================] - 7s 36ms/step - loss: 0.1034 - sparse_categorical_accuracy: 0.9639 - val_loss: 0.1799 - val_sparse_categorical_accuracy: 0.9400
+Epoch 2/10
+200/200 [==============================] - 7s 35ms/step - loss: 0.0911 - sparse_categorical_accuracy: 0.9689 - val_loss: 0.1820 - val_sparse_categorical_accuracy: 0.9463
+Epoch 3/10
+200/200 [==============================] - 7s 35ms/step - loss: 0.0855 - sparse_categorical_accuracy: 0.9706 - val_loss: 0.1857 - val_sparse_categorical_accuracy: 0.9413
+Epoch 4/10
+200/200 [==============================] - 7s 35ms/step - loss: 0.0810 - sparse_categorical_accuracy: 0.9733 - val_loss: 0.1871 - val_sparse_categorical_accuracy: 0.9413
+Epoch 5/10
+200/200 [==============================] - 7s 34ms/step - loss: 0.0777 - sparse_categorical_accuracy: 0.9748 - val_loss: 0.1894 - val_sparse_categorical_accuracy: 0.9413
+Epoch 6/10
+200/200 [==============================] - 7s 34ms/step - loss: 0.0749 - sparse_categorical_accuracy: 0.9750 - val_loss: 0.1866 - val_sparse_categorical_accuracy: 0.9400
+Epoch 7/10
+200/200 [==============================] - 7s 35ms/step - loss: 0.0725 - sparse_categorical_accuracy: 0.9750 - val_loss: 0.1876 - val_sparse_categorical_accuracy: 0.9450
+Epoch 8/10
+200/200 [==============================] - 7s 34ms/step - loss: 0.0699 - sparse_categorical_accuracy: 0.9766 - val_loss: 0.1923 - val_sparse_categorical_accuracy: 0.9438
+Epoch 9/10
+200/200 [==============================] - 9s 43ms/step - loss: 0.0672 - sparse_categorical_accuracy: 0.9780 - val_loss: 0.2016 - val_sparse_categorical_accuracy: 0.9425
+Epoch 10/10
+200/200 [==============================] - 8s 42ms/step - loss: 0.0658 - sparse_categorical_accuracy: 0.9789 - val_loss: 0.1995 - val_sparse_categorical_accuracy: 0.9463
+25/25 [==============================] - 6s 231ms/step - loss: 0.2346 - sparse_categorical_accuracy: 0.9250
+Accuracy:  0.925000011920929
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 22:38:24.226578: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 22:38:26.371677: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 22:38:26.371791: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 22:38:26.378070: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 22:38:26.378094: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.496ms.
+2021-05-08 22:38:26.378100: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.124ms.
+2021-05-08 22:38:26.528108: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 22:38:26.528131: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 22:38:26.560050: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (640).
+TFLite Dimension:41.69 kB
+Accuracy tflite model: 0.925
+2021-05-08 22:38:27.447854: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 22:38:27.447956: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 22:38:27.454451: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 22:38:27.454476: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.41ms.
+2021-05-08 22:38:27.454481: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.123ms.
+2021-05-08 22:38:27.541463: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 22:38:27.541490: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 22:38:27.556474: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (640).
+TFLite (Compressed) Dimension:19.02 kB
+
+
+
+
+
+### MODEL B ### 
+Epoch 1/35
+2021-05-08 22:42:39.885400: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 99 of 100
+2021-05-08 22:42:39.991465: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+200/200 [==============================] - 18s 91ms/step - loss: 1.4850 - sparse_categorical_accuracy: 0.4389 - val_loss: 0.9092 - val_sparse_categorical_accuracy: 0.6675
+Epoch 2/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.9569 - sparse_categorical_accuracy: 0.6514 - val_loss: 0.7393 - val_sparse_categorical_accuracy: 0.7350
+Epoch 3/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.8019 - sparse_categorical_accuracy: 0.7164 - val_loss: 0.5481 - val_sparse_categorical_accuracy: 0.8062
+Epoch 4/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.7183 - sparse_categorical_accuracy: 0.7475 - val_loss: 0.4889 - val_sparse_categorical_accuracy: 0.8375
+Epoch 5/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.6710 - sparse_categorical_accuracy: 0.7688 - val_loss: 0.4498 - val_sparse_categorical_accuracy: 0.8288
+Epoch 6/35
+200/200 [==============================] - 7s 36ms/step - loss: 0.6258 - sparse_categorical_accuracy: 0.7852 - val_loss: 0.4817 - val_sparse_categorical_accuracy: 0.8350
+Epoch 7/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.5752 - sparse_categorical_accuracy: 0.8023 - val_loss: 0.4127 - val_sparse_categorical_accuracy: 0.8450
+Epoch 8/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.5451 - sparse_categorical_accuracy: 0.8152 - val_loss: 0.4059 - val_sparse_categorical_accuracy: 0.8562
+Epoch 9/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.5139 - sparse_categorical_accuracy: 0.8264 - val_loss: 0.3981 - val_sparse_categorical_accuracy: 0.8550
+Epoch 10/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.4838 - sparse_categorical_accuracy: 0.8359 - val_loss: 0.3802 - val_sparse_categorical_accuracy: 0.8637
+Epoch 11/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.4535 - sparse_categorical_accuracy: 0.8422 - val_loss: 0.3558 - val_sparse_categorical_accuracy: 0.8687
+Epoch 12/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.4538 - sparse_categorical_accuracy: 0.8431 - val_loss: 0.3779 - val_sparse_categorical_accuracy: 0.8600
+Epoch 13/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.4207 - sparse_categorical_accuracy: 0.8578 - val_loss: 0.3263 - val_sparse_categorical_accuracy: 0.8763
+Epoch 14/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.4018 - sparse_categorical_accuracy: 0.8625 - val_loss: 0.3439 - val_sparse_categorical_accuracy: 0.8825
+Epoch 15/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3854 - sparse_categorical_accuracy: 0.8655 - val_loss: 0.3366 - val_sparse_categorical_accuracy: 0.8750
+Epoch 16/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3799 - sparse_categorical_accuracy: 0.8700 - val_loss: 0.3531 - val_sparse_categorical_accuracy: 0.8925
+Epoch 17/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3538 - sparse_categorical_accuracy: 0.8803 - val_loss: 0.3809 - val_sparse_categorical_accuracy: 0.8800
+Epoch 18/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3515 - sparse_categorical_accuracy: 0.8797 - val_loss: 0.3372 - val_sparse_categorical_accuracy: 0.8850
+Epoch 19/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3462 - sparse_categorical_accuracy: 0.8841 - val_loss: 0.3163 - val_sparse_categorical_accuracy: 0.8888
+Epoch 20/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3535 - sparse_categorical_accuracy: 0.8795 - val_loss: 0.2984 - val_sparse_categorical_accuracy: 0.8925
+Epoch 21/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3275 - sparse_categorical_accuracy: 0.8908 - val_loss: 0.3402 - val_sparse_categorical_accuracy: 0.8788
+Epoch 22/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3261 - sparse_categorical_accuracy: 0.8881 - val_loss: 0.2950 - val_sparse_categorical_accuracy: 0.9013
+Epoch 23/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3097 - sparse_categorical_accuracy: 0.8920 - val_loss: 0.3686 - val_sparse_categorical_accuracy: 0.8788
+Epoch 24/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.2930 - sparse_categorical_accuracy: 0.8991 - val_loss: 0.3060 - val_sparse_categorical_accuracy: 0.9050
+Epoch 25/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.2885 - sparse_categorical_accuracy: 0.9002 - val_loss: 0.3356 - val_sparse_categorical_accuracy: 0.8888
+Epoch 26/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.2718 - sparse_categorical_accuracy: 0.9064 - val_loss: 0.2958 - val_sparse_categorical_accuracy: 0.8913
+Epoch 27/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.2840 - sparse_categorical_accuracy: 0.8995 - val_loss: 0.2987 - val_sparse_categorical_accuracy: 0.8988
+Epoch 28/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2723 - sparse_categorical_accuracy: 0.9042 - val_loss: 0.3042 - val_sparse_categorical_accuracy: 0.8988
+Epoch 29/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.2813 - sparse_categorical_accuracy: 0.9047 - val_loss: 0.2654 - val_sparse_categorical_accuracy: 0.9100
+Epoch 30/35
+200/200 [==============================] - 7s 35ms/step - loss: 0.2652 - sparse_categorical_accuracy: 0.9095 - val_loss: 0.3664 - val_sparse_categorical_accuracy: 0.8775
+Epoch 31/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.2489 - sparse_categorical_accuracy: 0.9133 - val_loss: 0.2763 - val_sparse_categorical_accuracy: 0.8988
+Epoch 32/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.2541 - sparse_categorical_accuracy: 0.9097 - val_loss: 0.2617 - val_sparse_categorical_accuracy: 0.9062
+Epoch 33/35
+200/200 [==============================] - 7s 37ms/step - loss: 0.2442 - sparse_categorical_accuracy: 0.9131 - val_loss: 0.3053 - val_sparse_categorical_accuracy: 0.8938
+Epoch 34/35
+200/200 [==============================] - 7s 36ms/step - loss: 0.2480 - sparse_categorical_accuracy: 0.9148 - val_loss: 0.3009 - val_sparse_categorical_accuracy: 0.8913
+Epoch 35/35
+200/200 [==============================] - 7s 36ms/step - loss: 0.2411 - sparse_categorical_accuracy: 0.9162 - val_loss: 0.2698 - val_sparse_categorical_accuracy: 0.9112
+25/25 [==============================] - 3s 108ms/step - loss: 0.2800 - sparse_categorical_accuracy: 0.9112
+Accuracy:  0.9112499952316284
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 22:46:52.394208: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 22:46:54.640970: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 22:46:54.641074: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 22:46:54.646985: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 22:46:54.647007: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.356ms.
+2021-05-08 22:46:54.647012: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.127ms.
+2021-05-08 22:46:54.731843: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 22:46:54.731868: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 22:46:54.748689: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise because it has fewer than 1024 elements (576).
+2021-05-08 22:46:54.748720: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite Dimension:42.08 kB
+Accuracy tflite model: 0.9075
+2021-05-08 22:46:55.363062: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 22:46:55.363150: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 22:46:55.373026: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 22:46:55.373062: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 6.933ms.
+2021-05-08 22:46:55.373071: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.273ms.
+2021-05-08 22:46:55.457490: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 22:46:55.457524: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 22:46:55.473840: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise because it has fewer than 1024 elements (576).
+2021-05-08 22:46:55.473872: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite (Compressed) Dimension:32.62 kB
+
+
+
+
+
+### MODEL C ### 
+Epoch 1/35
+2021-05-08 22:48:13.302305: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 95 of 100
+2021-05-08 22:48:13.802522: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+200/200 [==============================] - 19s 95ms/step - loss: 1.4483 - sparse_categorical_accuracy: 0.4592 - val_loss: 0.8944 - val_sparse_categorical_accuracy: 0.6737
+Epoch 2/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.9566 - sparse_categorical_accuracy: 0.6486 - val_loss: 0.6936 - val_sparse_categorical_accuracy: 0.7588
+Epoch 3/35
+200/200 [==============================] - 6s 31ms/step - loss: 0.7928 - sparse_categorical_accuracy: 0.7177 - val_loss: 0.5374 - val_sparse_categorical_accuracy: 0.8100
+Epoch 4/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.7047 - sparse_categorical_accuracy: 0.7502 - val_loss: 0.5030 - val_sparse_categorical_accuracy: 0.8200
+Epoch 5/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.6455 - sparse_categorical_accuracy: 0.7745 - val_loss: 0.4471 - val_sparse_categorical_accuracy: 0.8537
+Epoch 6/35
+200/200 [==============================] - 7s 36ms/step - loss: 0.5948 - sparse_categorical_accuracy: 0.7959 - val_loss: 0.4431 - val_sparse_categorical_accuracy: 0.8438
+Epoch 7/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.5500 - sparse_categorical_accuracy: 0.8097 - val_loss: 0.4133 - val_sparse_categorical_accuracy: 0.8550
+Epoch 8/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.5066 - sparse_categorical_accuracy: 0.8217 - val_loss: 0.4175 - val_sparse_categorical_accuracy: 0.8575
+Epoch 9/35
+200/200 [==============================] - 6s 31ms/step - loss: 0.4815 - sparse_categorical_accuracy: 0.8323 - val_loss: 0.3760 - val_sparse_categorical_accuracy: 0.8612
+Epoch 10/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.4677 - sparse_categorical_accuracy: 0.8422 - val_loss: 0.3873 - val_sparse_categorical_accuracy: 0.8737
+Epoch 11/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.4320 - sparse_categorical_accuracy: 0.8473 - val_loss: 0.3539 - val_sparse_categorical_accuracy: 0.8850
+Epoch 12/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.4166 - sparse_categorical_accuracy: 0.8558 - val_loss: 0.3476 - val_sparse_categorical_accuracy: 0.8788
+Epoch 13/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.3829 - sparse_categorical_accuracy: 0.8689 - val_loss: 0.3240 - val_sparse_categorical_accuracy: 0.8925
+Epoch 14/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.3793 - sparse_categorical_accuracy: 0.8691 - val_loss: 0.3469 - val_sparse_categorical_accuracy: 0.8900
+Epoch 15/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.3638 - sparse_categorical_accuracy: 0.8723 - val_loss: 0.3306 - val_sparse_categorical_accuracy: 0.8875
+Epoch 16/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.3347 - sparse_categorical_accuracy: 0.8833 - val_loss: 0.3638 - val_sparse_categorical_accuracy: 0.8850
+Epoch 17/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.3328 - sparse_categorical_accuracy: 0.8828 - val_loss: 0.3657 - val_sparse_categorical_accuracy: 0.8800
+Epoch 18/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.3207 - sparse_categorical_accuracy: 0.8884 - val_loss: 0.2962 - val_sparse_categorical_accuracy: 0.9075
+Epoch 19/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.3008 - sparse_categorical_accuracy: 0.8936 - val_loss: 0.2856 - val_sparse_categorical_accuracy: 0.9000
+Epoch 20/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2876 - sparse_categorical_accuracy: 0.9000 - val_loss: 0.2948 - val_sparse_categorical_accuracy: 0.9075
+Epoch 21/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2802 - sparse_categorical_accuracy: 0.9039 - val_loss: 0.3082 - val_sparse_categorical_accuracy: 0.8888
+Epoch 22/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2900 - sparse_categorical_accuracy: 0.8984 - val_loss: 0.2986 - val_sparse_categorical_accuracy: 0.9075
+Epoch 23/35
+200/200 [==============================] - 6s 31ms/step - loss: 0.2719 - sparse_categorical_accuracy: 0.9069 - val_loss: 0.3063 - val_sparse_categorical_accuracy: 0.8938
+Epoch 24/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2716 - sparse_categorical_accuracy: 0.9064 - val_loss: 0.2720 - val_sparse_categorical_accuracy: 0.9112
+Epoch 25/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2575 - sparse_categorical_accuracy: 0.9078 - val_loss: 0.3283 - val_sparse_categorical_accuracy: 0.9025
+Epoch 26/35
+200/200 [==============================] - 6s 31ms/step - loss: 0.2542 - sparse_categorical_accuracy: 0.9095 - val_loss: 0.3347 - val_sparse_categorical_accuracy: 0.8938
+Epoch 27/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2510 - sparse_categorical_accuracy: 0.9123 - val_loss: 0.3025 - val_sparse_categorical_accuracy: 0.9013
+Epoch 28/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2439 - sparse_categorical_accuracy: 0.9159 - val_loss: 0.3126 - val_sparse_categorical_accuracy: 0.8975
+Epoch 29/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.2324 - sparse_categorical_accuracy: 0.9191 - val_loss: 0.2724 - val_sparse_categorical_accuracy: 0.9225
+Epoch 30/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.2384 - sparse_categorical_accuracy: 0.9148 - val_loss: 0.3480 - val_sparse_categorical_accuracy: 0.8900
+Epoch 31/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.2323 - sparse_categorical_accuracy: 0.9169 - val_loss: 0.3166 - val_sparse_categorical_accuracy: 0.8950
+Epoch 32/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2200 - sparse_categorical_accuracy: 0.9239 - val_loss: 0.2945 - val_sparse_categorical_accuracy: 0.9100
+Epoch 33/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2290 - sparse_categorical_accuracy: 0.9178 - val_loss: 0.2804 - val_sparse_categorical_accuracy: 0.9075
+Epoch 34/35
+200/200 [==============================] - 6s 32ms/step - loss: 0.2136 - sparse_categorical_accuracy: 0.9252 - val_loss: 0.2883 - val_sparse_categorical_accuracy: 0.9062
+25/25 [==============================] - 2s 100ms/step - loss: 0.2633 - sparse_categorical_accuracy: 0.9162
+Accuracy:  0.9162499904632568
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 22:52:11.197249: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 22:52:13.111160: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 22:52:13.111274: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 22:52:13.117452: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 22:52:13.117477: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.511ms.
+2021-05-08 22:52:13.117487: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.126ms.
+2021-05-08 22:52:13.204115: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 22:52:13.204144: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 22:52:13.221128: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (900).
+2021-05-08 22:52:13.221154: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite Dimension:53.20 kB
+Accuracy tflite model: 0.915
+2021-05-08 22:52:13.769079: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 22:52:13.769167: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 22:52:13.774928: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 22:52:13.774954: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.297ms.
+2021-05-08 22:52:13.774963: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.128ms.
+2021-05-08 22:52:13.854724: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 22:52:13.854767: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 22:52:13.871673: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (900).
+2021-05-08 22:52:13.871703: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite (Compressed) Dimension:42.25 kB    
