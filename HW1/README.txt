@@ -1,4 +1,4 @@
-**Machine learning for IoT**
+Machine learning for IoT
 
 HOMEWORK 1 
 
