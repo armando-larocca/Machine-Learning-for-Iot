@@ -1,1 +1,223 @@
 ### BIG MODEL ### 
+Epoch 1/10
+2021-05-08 23:01:20.413027: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 55 of 100
+2021-05-08 23:01:28.873779: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+200/200 [==============================] - 72s 362ms/step - loss: 0.8111 - sparse_categorical_accuracy: 0.7180 - val_loss: 0.3729 - val_sparse_categorical_accuracy: 0.8863
+
+Epoch 00002: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 2/10
+200/200 [==============================] - 52s 259ms/step - loss: 0.3422 - sparse_categorical_accuracy: 0.8864 - val_loss: 0.2615 - val_sparse_categorical_accuracy: 0.9175
+
+Epoch 00003: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 3/10
+200/200 [==============================] - 48s 238ms/step - loss: 0.2475 - sparse_categorical_accuracy: 0.9184 - val_loss: 0.2780 - val_sparse_categorical_accuracy: 0.9150
+
+Epoch 00004: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 4/10
+200/200 [==============================] - 44s 222ms/step - loss: 0.1919 - sparse_categorical_accuracy: 0.9353 - val_loss: 0.2336 - val_sparse_categorical_accuracy: 0.9325
+
+Epoch 00005: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 5/10
+200/200 [==============================] - 45s 227ms/step - loss: 0.1560 - sparse_categorical_accuracy: 0.9495 - val_loss: 0.2802 - val_sparse_categorical_accuracy: 0.9112
+
+Epoch 00006: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 6/10
+200/200 [==============================] - 45s 225ms/step - loss: 0.0882 - sparse_categorical_accuracy: 0.9733 - val_loss: 0.1940 - val_sparse_categorical_accuracy: 0.9450
+
+Epoch 00007: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 7/10
+200/200 [==============================] - 44s 220ms/step - loss: 0.0542 - sparse_categorical_accuracy: 0.9867 - val_loss: 0.2005 - val_sparse_categorical_accuracy: 0.9413
+
+Epoch 00008: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 8/10
+200/200 [==============================] - 51s 253ms/step - loss: 0.0420 - sparse_categorical_accuracy: 0.9908 - val_loss: 0.1804 - val_sparse_categorical_accuracy: 0.9400
+
+Epoch 00009: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 9/10
+200/200 [==============================] - 45s 226ms/step - loss: 0.0305 - sparse_categorical_accuracy: 0.9945 - val_loss: 0.1860 - val_sparse_categorical_accuracy: 0.9425
+
+Epoch 00010: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 10/10
+200/200 [==============================] - 46s 231ms/step - loss: 0.0251 - sparse_categorical_accuracy: 0.9952 - val_loss: 0.1785 - val_sparse_categorical_accuracy: 0.9488
+25/25 [==============================] - 5s 193ms/step - loss: 0.1963 - sparse_categorical_accuracy: 0.9450
+Accuracy:  0.9449999928474426
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 23:09:50.674697: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 23:09:53.645265: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 23:09:53.645379: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 23:09:53.654182: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 23:09:53.654211: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 129 nodes (96), 122 edges (89), time = 5.044ms.
+2021-05-08 23:09:53.654221: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.177ms.
+2021-05-08 23:09:53.840896: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 23:09:53.840924: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+TFLite Dimension:3183.31 kB
+Accuracy tflite model: 0.945
+2021-05-08 23:09:56.356680: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 23:09:56.356774: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 23:09:56.365280: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 23:09:56.365305: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 129 nodes (96), 122 edges (89), time = 4.976ms.
+2021-05-08 23:09:56.365311: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.18ms.
+2021-05-08 23:09:56.512311: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 23:09:56.512341: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+TFLite (Compressed) Dimension:2928.77 kB
+
+
+
+
+
+### LITTLE MODEL ### 
+Epoch 00001: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 1/25
+200/200 [==============================] - 17s 83ms/step - loss: 1.1811 - sparse_categorical_accuracy: 0.5689 - val_loss: 0.6505 - val_sparse_categorical_accuracy: 0.7738
+
+Epoch 00002: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 2/25
+200/200 [==============================] - 5s 27ms/step - loss: 0.7120 - sparse_categorical_accuracy: 0.7472 - val_loss: 0.5394 - val_sparse_categorical_accuracy: 0.8188
+
+Epoch 00003: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 3/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.6148 - sparse_categorical_accuracy: 0.7845 - val_loss: 0.4827 - val_sparse_categorical_accuracy: 0.8325
+
+Epoch 00004: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 4/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.5440 - sparse_categorical_accuracy: 0.8133 - val_loss: 0.4520 - val_sparse_categorical_accuracy: 0.8500
+
+Epoch 00005: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 5/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.4963 - sparse_categorical_accuracy: 0.8289 - val_loss: 0.3808 - val_sparse_categorical_accuracy: 0.8712
+
+Epoch 00006: LearningRateScheduler reducing learning rate to tf.Tensor(0.009048374, shape=(), dtype=float32).
+Epoch 6/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.4569 - sparse_categorical_accuracy: 0.8452 - val_loss: 0.3776 - val_sparse_categorical_accuracy: 0.8750
+
+Epoch 00007: LearningRateScheduler reducing learning rate to tf.Tensor(0.008187308, shape=(), dtype=float32).
+Epoch 7/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.4107 - sparse_categorical_accuracy: 0.8575 - val_loss: 0.3441 - val_sparse_categorical_accuracy: 0.8813
+
+Epoch 00008: LearningRateScheduler reducing learning rate to tf.Tensor(0.0074081826, shape=(), dtype=float32).
+Epoch 8/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.3890 - sparse_categorical_accuracy: 0.8637 - val_loss: 0.3801 - val_sparse_categorical_accuracy: 0.8788
+
+Epoch 00009: LearningRateScheduler reducing learning rate to tf.Tensor(0.0067032008, shape=(), dtype=float32).
+Epoch 9/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.3699 - sparse_categorical_accuracy: 0.8681 - val_loss: 0.3292 - val_sparse_categorical_accuracy: 0.8963
+
+Epoch 00010: LearningRateScheduler reducing learning rate to tf.Tensor(0.0060653067, shape=(), dtype=float32).
+Epoch 10/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.3256 - sparse_categorical_accuracy: 0.8873 - val_loss: 0.3095 - val_sparse_categorical_accuracy: 0.8925
+
+Epoch 00011: LearningRateScheduler reducing learning rate to tf.Tensor(0.0054881168, shape=(), dtype=float32).
+Epoch 11/25
+200/200 [==============================] - 6s 28ms/step - loss: 0.3215 - sparse_categorical_accuracy: 0.8902 - val_loss: 0.2991 - val_sparse_categorical_accuracy: 0.9062
+
+Epoch 00012: LearningRateScheduler reducing learning rate to tf.Tensor(0.0049658534, shape=(), dtype=float32).
+Epoch 12/25
+200/200 [==============================] - 5s 27ms/step - loss: 0.3002 - sparse_categorical_accuracy: 0.8969 - val_loss: 0.3448 - val_sparse_categorical_accuracy: 0.8850
+
+Epoch 00013: LearningRateScheduler reducing learning rate to tf.Tensor(0.00449329, shape=(), dtype=float32).
+Epoch 13/25
+200/200 [==============================] - 5s 25ms/step - loss: 0.2767 - sparse_categorical_accuracy: 0.9036 - val_loss: 0.2998 - val_sparse_categorical_accuracy: 0.9000
+
+Epoch 00014: LearningRateScheduler reducing learning rate to tf.Tensor(0.004065697, shape=(), dtype=float32).
+Epoch 14/25
+200/200 [==============================] - 5s 25ms/step - loss: 0.2610 - sparse_categorical_accuracy: 0.9091 - val_loss: 0.2834 - val_sparse_categorical_accuracy: 0.9100
+
+Epoch 00015: LearningRateScheduler reducing learning rate to tf.Tensor(0.003678795, shape=(), dtype=float32).
+Epoch 15/25
+200/200 [==============================] - 5s 25ms/step - loss: 0.2391 - sparse_categorical_accuracy: 0.9211 - val_loss: 0.2996 - val_sparse_categorical_accuracy: 0.9013
+
+Epoch 00016: LearningRateScheduler reducing learning rate to tf.Tensor(0.0033287113, shape=(), dtype=float32).
+Epoch 16/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.2340 - sparse_categorical_accuracy: 0.9169 - val_loss: 0.3059 - val_sparse_categorical_accuracy: 0.9125
+
+Epoch 00017: LearningRateScheduler reducing learning rate to tf.Tensor(0.0030119426, shape=(), dtype=float32).
+Epoch 17/25
+200/200 [==============================] - 5s 25ms/step - loss: 0.2271 - sparse_categorical_accuracy: 0.9208 - val_loss: 0.3493 - val_sparse_categorical_accuracy: 0.8913
+
+Epoch 00018: LearningRateScheduler reducing learning rate to tf.Tensor(0.0027253183, shape=(), dtype=float32).
+Epoch 18/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.2049 - sparse_categorical_accuracy: 0.9277 - val_loss: 0.2852 - val_sparse_categorical_accuracy: 0.9087
+
+Epoch 00019: LearningRateScheduler reducing learning rate to tf.Tensor(0.00246597, shape=(), dtype=float32).
+Epoch 19/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.2035 - sparse_categorical_accuracy: 0.9283 - val_loss: 0.2688 - val_sparse_categorical_accuracy: 0.9112
+
+Epoch 00020: LearningRateScheduler reducing learning rate to tf.Tensor(0.002231302, shape=(), dtype=float32).
+Epoch 20/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.1970 - sparse_categorical_accuracy: 0.9300 - val_loss: 0.2657 - val_sparse_categorical_accuracy: 0.9237
+
+Epoch 00021: LearningRateScheduler reducing learning rate to tf.Tensor(0.0020189655, shape=(), dtype=float32).
+Epoch 21/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.1924 - sparse_categorical_accuracy: 0.9330 - val_loss: 0.3027 - val_sparse_categorical_accuracy: 0.8875
+
+Epoch 00022: LearningRateScheduler reducing learning rate to tf.Tensor(0.0018268356, shape=(), dtype=float32).
+Epoch 22/25
+200/200 [==============================] - 5s 27ms/step - loss: 0.1726 - sparse_categorical_accuracy: 0.9411 - val_loss: 0.2846 - val_sparse_categorical_accuracy: 0.9162
+
+Epoch 00023: LearningRateScheduler reducing learning rate to tf.Tensor(0.0016529892, shape=(), dtype=float32).
+Epoch 23/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.1798 - sparse_categorical_accuracy: 0.9369 - val_loss: 0.3349 - val_sparse_categorical_accuracy: 0.8913
+
+Epoch 00024: LearningRateScheduler reducing learning rate to tf.Tensor(0.0014956865, shape=(), dtype=float32).
+Epoch 24/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.1626 - sparse_categorical_accuracy: 0.9417 - val_loss: 0.2635 - val_sparse_categorical_accuracy: 0.9112
+
+Epoch 00025: LearningRateScheduler reducing learning rate to tf.Tensor(0.0013533531, shape=(), dtype=float32).
+Epoch 25/25
+200/200 [==============================] - 5s 26ms/step - loss: 0.1526 - sparse_categorical_accuracy: 0.9488 - val_loss: 0.3157 - val_sparse_categorical_accuracy: 0.9200
+Epoch 1/10
+200/200 [==============================] - 4s 22ms/step - loss: 0.1135 - sparse_categorical_accuracy: 0.9620 - val_loss: 0.3548 - val_sparse_categorical_accuracy: 0.9062
+Epoch 2/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0873 - sparse_categorical_accuracy: 0.9714 - val_loss: 0.3788 - val_sparse_categorical_accuracy: 0.9038
+Epoch 3/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0794 - sparse_categorical_accuracy: 0.9742 - val_loss: 0.3836 - val_sparse_categorical_accuracy: 0.9100
+Epoch 4/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0727 - sparse_categorical_accuracy: 0.9767 - val_loss: 0.4031 - val_sparse_categorical_accuracy: 0.9013
+Epoch 5/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0678 - sparse_categorical_accuracy: 0.9784 - val_loss: 0.4218 - val_sparse_categorical_accuracy: 0.9062
+Epoch 6/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0643 - sparse_categorical_accuracy: 0.9811 - val_loss: 0.4326 - val_sparse_categorical_accuracy: 0.9100
+Epoch 7/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0609 - sparse_categorical_accuracy: 0.9820 - val_loss: 0.4528 - val_sparse_categorical_accuracy: 0.9050
+Epoch 8/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0575 - sparse_categorical_accuracy: 0.9822 - val_loss: 0.4527 - val_sparse_categorical_accuracy: 0.9125
+Epoch 9/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0554 - sparse_categorical_accuracy: 0.9827 - val_loss: 0.4748 - val_sparse_categorical_accuracy: 0.9100
+Epoch 10/10
+200/200 [==============================] - 4s 21ms/step - loss: 0.0538 - sparse_categorical_accuracy: 0.9841 - val_loss: 0.4882 - val_sparse_categorical_accuracy: 0.9087
+25/25 [==============================] - 2s 98ms/step - loss: 0.4072 - sparse_categorical_accuracy: 0.9013
+Accuracy:  0.9012500047683716
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 23:15:38.115928: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-08 23:15:39.761759: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 23:15:39.761872: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 23:15:39.768212: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 23:15:39.768236: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.582ms.
+2021-05-08 23:15:39.768242: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.128ms.
+2021-05-08 23:15:39.846784: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 23:15:39.846812: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 23:15:39.863652: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (810).
+2021-05-08 23:15:39.863683: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite Dimension:43.09 kB
+Accuracy tflite model: 0.8975
+2021-05-08 23:15:40.304781: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-08 23:15:40.304935: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-08 23:15:40.310726: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-08 23:15:40.310751: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.297ms.
+2021-05-08 23:15:40.310757: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.123ms.
+2021-05-08 23:15:40.398536: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-08 23:15:40.398566: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-08 23:15:40.413651: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (810).
+2021-05-08 23:15:40.413679: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite (Compressed) Dimension:19.38 kB
+
