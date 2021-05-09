@@ -179,3 +179,56 @@ TFLite Dimension:3183.31 kB
 Accuracy tflite model: 0.945
 
 
+
+
+### MODEL 3 ### 
+Epoch 1/8
+2021-05-09 14:48:13.533260: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 50 of 100
+2021-05-09 14:48:22.752282: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+200/200 [==============================] - 84s 421ms/step - loss: 0.9506 - sparse_categorical_accuracy: 0.6700 - val_loss: 0.4819 - val_sparse_categorical_accuracy: 0.8537
+
+Epoch 00002: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 2/8
+200/200 [==============================] - 68s 341ms/step - loss: 0.4236 - sparse_categorical_accuracy: 0.8670 - val_loss: 0.2835 - val_sparse_categorical_accuracy: 0.9112
+
+Epoch 00003: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 3/8
+200/200 [==============================] - 66s 331ms/step - loss: 0.2918 - sparse_categorical_accuracy: 0.9080 - val_loss: 0.2670 - val_sparse_categorical_accuracy: 0.9262
+
+Epoch 00004: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 4/8
+200/200 [==============================] - 68s 341ms/step - loss: 0.2287 - sparse_categorical_accuracy: 0.9281 - val_loss: 0.2330 - val_sparse_categorical_accuracy: 0.9250
+
+Epoch 00005: LearningRateScheduler reducing learning rate to 0.0010000000474974513.
+Epoch 5/8
+200/200 [==============================] - 67s 333ms/step - loss: 0.1889 - sparse_categorical_accuracy: 0.9383 - val_loss: 0.2343 - val_sparse_categorical_accuracy: 0.9388
+
+Epoch 00006: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 6/8
+200/200 [==============================] - 67s 336ms/step - loss: 0.0996 - sparse_categorical_accuracy: 0.9691 - val_loss: 0.2039 - val_sparse_categorical_accuracy: 0.9438
+
+Epoch 00007: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 7/8
+200/200 [==============================] - 67s 333ms/step - loss: 0.0587 - sparse_categorical_accuracy: 0.9831 - val_loss: 0.1762 - val_sparse_categorical_accuracy: 0.9488
+
+Epoch 00008: LearningRateScheduler reducing learning rate to 0.00020000000949949026.
+Epoch 8/8
+200/200 [==============================] - 66s 330ms/step - loss: 0.0464 - sparse_categorical_accuracy: 0.9875 - val_loss: 0.1570 - val_sparse_categorical_accuracy: 0.9513
+25/25 [==============================] - 6s 237ms/step - loss: 0.2117 - sparse_categorical_accuracy: 0.9425
+Accuracy:  0.9424999952316284
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-09 14:57:46.712662: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-09 14:57:49.844236: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-09 14:57:49.844588: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-09 14:57:49.857161: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-09 14:57:49.857192: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 103 nodes (77), 98 edges (72), time = 7.291ms.
+2021-05-09 14:57:49.857201: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.326ms.
+2021-05-09 14:57:50.057463: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-09 14:57:50.057488: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+TFLite Dimension:3715.37 kB
+Accuracy tflite model: 0.9425
