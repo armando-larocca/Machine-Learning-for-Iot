@@ -221,3 +221,49 @@ Accuracy tflite model: 0.8975
 2021-05-08 23:15:40.413679: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
 TFLite (Compressed) Dimension:19.38 kB
 
+
+python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 39.99ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 39.70ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 40.54ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 39.61ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 39.80ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 39.99ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 40.14ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 38.94ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 40.35ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 40.28ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --mfcc --length 1000 --stride 600
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 39.33ms
+
