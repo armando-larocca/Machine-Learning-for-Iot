@@ -199,7 +199,7 @@ Total Latency 41.84ms
 
 
 ### MODEL C ### 
----> version 1 
+---> version 1 (not good for total latency contraint)
 
  MFCC_OPTIONS = {'frame_length': 1000,
             'frame_step': 600,
@@ -352,3 +352,169 @@ Total Latency 40.29ms
 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 Inference Latency 1.32ms
 Total Latency 40.10ms
+
+
+--> version 2 ( good for latency)
+
+MFCC_OPTIONS = {'frame_length': 1000,
+            'frame_step': 630,
+            'mfcc': True,
+            'lower_frequency': 20,
+            'upper_frequency': 4000,
+            'num_mel_bins': 40,
+            'num_coefficients': 10
+            }
+
+
+Epoch 1/35
+200/200 [==============================] - 19s 96ms/step - loss: 1.4000 - sparse_categorical_accuracy: 0.4848 - val_loss: 0.8571 - val_sparse_categorical_accuracy: 0.7063
+Epoch 2/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.9498 - sparse_categorical_accuracy: 0.6578 - val_loss: 0.6533 - val_sparse_categorical_accuracy: 0.7700
+Epoch 3/35
+200/200 [==============================] - 7s 36ms/step - loss: 0.8012 - sparse_categorical_accuracy: 0.7098 - val_loss: 0.5519 - val_sparse_categorical_accuracy: 0.7975
+Epoch 4/35
+200/200 [==============================] - 6s 31ms/step - loss: 0.7332 - sparse_categorical_accuracy: 0.7369 - val_loss: 0.4993 - val_sparse_categorical_accuracy: 0.8263
+Epoch 5/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.6672 - sparse_categorical_accuracy: 0.7677 - val_loss: 0.4621 - val_sparse_categorical_accuracy: 0.8388
+Epoch 6/35
+200/200 [==============================] - 6s 29ms/step - loss: 0.6121 - sparse_categorical_accuracy: 0.7902 - val_loss: 0.4326 - val_sparse_categorical_accuracy: 0.8487
+Epoch 7/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.5538 - sparse_categorical_accuracy: 0.8094 - val_loss: 0.4177 - val_sparse_categorical_accuracy: 0.8512
+Epoch 8/35
+200/200 [==============================] - 7s 35ms/step - loss: 0.5300 - sparse_categorical_accuracy: 0.8148 - val_loss: 0.4152 - val_sparse_categorical_accuracy: 0.8675
+Epoch 9/35
+200/200 [==============================] - 8s 39ms/step - loss: 0.5040 - sparse_categorical_accuracy: 0.8272 - val_loss: 0.3684 - val_sparse_categorical_accuracy: 0.8675
+Epoch 10/35
+200/200 [==============================] - 6s 31ms/step - loss: 0.4727 - sparse_categorical_accuracy: 0.8336 - val_loss: 0.3684 - val_sparse_categorical_accuracy: 0.8712
+Epoch 11/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.4392 - sparse_categorical_accuracy: 0.8481 - val_loss: 0.3726 - val_sparse_categorical_accuracy: 0.8700
+Epoch 12/35
+200/200 [==============================] - 7s 34ms/step - loss: 0.4282 - sparse_categorical_accuracy: 0.8534 - val_loss: 0.3423 - val_sparse_categorical_accuracy: 0.8813
+Epoch 13/35
+200/200 [==============================] - 6s 29ms/step - loss: 0.4052 - sparse_categorical_accuracy: 0.8630 - val_loss: 0.3360 - val_sparse_categorical_accuracy: 0.8875
+Epoch 14/35
+200/200 [==============================] - 6s 29ms/step - loss: 0.3875 - sparse_categorical_accuracy: 0.8667 - val_loss: 0.3545 - val_sparse_categorical_accuracy: 0.8850
+Epoch 15/35
+200/200 [==============================] - 6s 28ms/step - loss: 0.3572 - sparse_categorical_accuracy: 0.8775 - val_loss: 0.3392 - val_sparse_categorical_accuracy: 0.8825
+Epoch 16/35
+200/200 [==============================] - 6s 29ms/step - loss: 0.3625 - sparse_categorical_accuracy: 0.8792 - val_loss: 0.3509 - val_sparse_categorical_accuracy: 0.8825
+Epoch 17/35
+200/200 [==============================] - 6s 28ms/step - loss: 0.3542 - sparse_categorical_accuracy: 0.8794 - val_loss: 0.3865 - val_sparse_categorical_accuracy: 0.8625
+Epoch 18/35
+200/200 [==============================] - 7s 33ms/step - loss: 0.3315 - sparse_categorical_accuracy: 0.8863 - val_loss: 0.3126 - val_sparse_categorical_accuracy: 0.8950
+Epoch 19/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.3174 - sparse_categorical_accuracy: 0.8913 - val_loss: 0.3219 - val_sparse_categorical_accuracy: 0.8913
+Epoch 20/35
+200/200 [==============================] - 6s 29ms/step - loss: 0.3040 - sparse_categorical_accuracy: 0.8936 - val_loss: 0.3455 - val_sparse_categorical_accuracy: 0.8800
+Epoch 21/35
+200/200 [==============================] - 6s 29ms/step - loss: 0.2992 - sparse_categorical_accuracy: 0.8953 - val_loss: 0.3265 - val_sparse_categorical_accuracy: 0.9000
+Epoch 22/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.2824 - sparse_categorical_accuracy: 0.8983 - val_loss: 0.3151 - val_sparse_categorical_accuracy: 0.8913
+Epoch 23/35
+200/200 [==============================] - 6s 28ms/step - loss: 0.2766 - sparse_categorical_accuracy: 0.9055 - val_loss: 0.3379 - val_sparse_categorical_accuracy: 0.8913
+Epoch 24/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.2636 - sparse_categorical_accuracy: 0.9083 - val_loss: 0.3304 - val_sparse_categorical_accuracy: 0.8875
+Epoch 25/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.2658 - sparse_categorical_accuracy: 0.9087 - val_loss: 0.3648 - val_sparse_categorical_accuracy: 0.8938
+Epoch 26/35
+200/200 [==============================] - 6s 30ms/step - loss: 0.2478 - sparse_categorical_accuracy: 0.9137 - val_loss: 0.3513 - val_sparse_categorical_accuracy: 0.8863
+Epoch 27/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.2608 - sparse_categorical_accuracy: 0.9069 - val_loss: 0.3255 - val_sparse_categorical_accuracy: 0.8875
+Epoch 28/35
+200/200 [==============================] - 6s 28ms/step - loss: 0.2538 - sparse_categorical_accuracy: 0.9106 - val_loss: 0.3108 - val_sparse_categorical_accuracy: 0.8975
+Epoch 29/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.2532 - sparse_categorical_accuracy: 0.9117 - val_loss: 0.2923 - val_sparse_categorical_accuracy: 0.9100
+Epoch 30/35
+200/200 [==============================] - 5s 26ms/step - loss: 0.2352 - sparse_categorical_accuracy: 0.9161 - val_loss: 0.3641 - val_sparse_categorical_accuracy: 0.8825
+Epoch 31/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.2319 - sparse_categorical_accuracy: 0.9183 - val_loss: 0.3032 - val_sparse_categorical_accuracy: 0.8888
+Epoch 32/35
+200/200 [==============================] - 5s 27ms/step - loss: 0.2320 - sparse_categorical_accuracy: 0.9164 - val_loss: 0.3021 - val_sparse_categorical_accuracy: 0.9025
+Epoch 33/35
+200/200 [==============================] - 6s 28ms/step - loss: 0.2262 - sparse_categorical_accuracy: 0.9194 - val_loss: 0.2958 - val_sparse_categorical_accuracy: 0.9087
+Epoch 34/35
+200/200 [==============================] - 6s 31ms/step - loss: 0.2178 - sparse_categorical_accuracy: 0.9237 - val_loss: 0.3129 - val_sparse_categorical_accuracy: 0.8963
+Epoch 35/35
+200/200 [==============================] - 6s 29ms/step - loss: 0.2223 - sparse_categorical_accuracy: 0.9222 - val_loss: 0.2912 - val_sparse_categorical_accuracy: 0.9150
+25/25 [==============================] - 2s 91ms/step - loss: 0.3209 - sparse_categorical_accuracy: 0.9087
+Accuracy:  0.9087499976158142
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-10 15:53:43.959352: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-10 15:53:45.930852: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-10 15:53:45.930963: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-10 15:53:45.937059: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-10 15:53:45.937082: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.443ms.
+2021-05-10 15:53:45.937088: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.129ms.
+2021-05-10 15:53:46.020227: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-10 15:53:46.020256: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-10 15:53:46.037963: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (900).
+2021-05-10 15:53:46.037992: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite Dimension:53.20 kB
+Accuracy tflite model: 0.90375
+2021-05-10 15:53:46.520125: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-10 15:53:46.520213: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-10 15:53:46.526429: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-10 15:53:46.526454: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.409ms.
+2021-05-10 15:53:46.526460: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.241ms.
+2021-05-10 15:53:46.609143: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-10 15:53:46.609172: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-10 15:53:46.623240: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (900).
+2021-05-10 15:53:46.623268: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite (Compressed) Dimension:41.60 kB
+
+
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.21ms
+Total Latency 37.83ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.20ms
+Total Latency 37.97ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.19ms
+Total Latency 38.13ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.19ms
+Total Latency 37.91ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.18ms
+Total Latency 38.33ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.20ms
+Total Latency 38.88ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.19ms
+Total Latency 38.41ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.19ms
+Total Latency 37.80ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.21ms
+Total Latency 37.79ms
+(py37) pi@raspberrypi:~/Iot/HW2/ex2 $ python kws_inference.py --model Group99_kws_c.tflite --length 1000 --stride 630 --mfcc
+/home/pi/Iot/HW2/ex2/Group99_kws_c.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.20ms
+Total Latency 37.66ms
