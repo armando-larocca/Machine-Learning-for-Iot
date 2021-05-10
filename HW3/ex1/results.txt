@@ -71,6 +71,17 @@ TFLite (Compressed) Dimension:2928.77 kB
 
 
 ### LITTLE MODEL ### 
+--> version1 (no good for total latency)
+
+MFCC_OPTIONS = {'frame_length':1000,
+                'frame_step': 600,
+                'mfcc': True,
+                'lower_frequency': 20,
+                'upper_frequency': 4000,
+                'num_mel_bins': 40,
+                'num_coefficients': 10
+                }
+
 Epoch 00001: LearningRateScheduler reducing learning rate to 0.009999999776482582.
 Epoch 1/25
 200/200 [==============================] - 17s 83ms/step - loss: 1.1811 - sparse_categorical_accuracy: 0.5689 - val_loss: 0.6505 - val_sparse_categorical_accuracy: 0.7738
@@ -267,3 +278,172 @@ INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 Inference Latency 1.23ms
 Total Latency 39.33ms
 
+
+--> version 2 (better in total latency and also in accuracy)
+
+MFCC_OPTIONS = {'frame_length':1000,
+                'frame_step': 620,
+                'mfcc': True,
+                'lower_frequency': 20,
+                'upper_frequency': 4000,
+                'num_mel_bins': 40,
+                'num_coefficients': 10
+                }
+
+Epoch 00001: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 1/25
+2021-05-10 16:21:41.983754: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 97 of 100
+2021-05-10 16:21:42.310479: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+200/200 [==============================] - 19s 93ms/step - loss: 1.1858 - sparse_categorical_accuracy: 0.5591 - val_loss: 0.6969 - val_sparse_categorical_accuracy: 0.7525
+
+Epoch 00002: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 2/25
+200/200 [==============================] - 6s 30ms/step - loss: 0.7220 - sparse_categorical_accuracy: 0.7406 - val_loss: 0.5180 - val_sparse_categorical_accuracy: 0.8275
+
+Epoch 00003: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 3/25
+200/200 [==============================] - 6s 29ms/step - loss: 0.5946 - sparse_categorical_accuracy: 0.7923 - val_loss: 0.4535 - val_sparse_categorical_accuracy: 0.8225
+
+Epoch 00004: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 4/25
+200/200 [==============================] - 6s 32ms/step - loss: 0.5361 - sparse_categorical_accuracy: 0.8133 - val_loss: 0.3951 - val_sparse_categorical_accuracy: 0.8600
+
+Epoch 00005: LearningRateScheduler reducing learning rate to 0.009999999776482582.
+Epoch 5/25
+200/200 [==============================] - 6s 30ms/step - loss: 0.5037 - sparse_categorical_accuracy: 0.8255 - val_loss: 0.3693 - val_sparse_categorical_accuracy: 0.8788
+
+Epoch 00006: LearningRateScheduler reducing learning rate to tf.Tensor(0.009048374, shape=(), dtype=float32).
+Epoch 6/25
+200/200 [==============================] - 6s 30ms/step - loss: 0.4672 - sparse_categorical_accuracy: 0.8403 - val_loss: 0.3736 - val_sparse_categorical_accuracy: 0.8775
+
+Epoch 00007: LearningRateScheduler reducing learning rate to tf.Tensor(0.008187308, shape=(), dtype=float32).
+Epoch 7/25
+200/200 [==============================] - 6s 30ms/step - loss: 0.4274 - sparse_categorical_accuracy: 0.8520 - val_loss: 0.3442 - val_sparse_categorical_accuracy: 0.8788
+
+Epoch 00008: LearningRateScheduler reducing learning rate to tf.Tensor(0.0074081826, shape=(), dtype=float32).
+Epoch 8/25
+200/200 [==============================] - 6s 29ms/step - loss: 0.3867 - sparse_categorical_accuracy: 0.8697 - val_loss: 0.3527 - val_sparse_categorical_accuracy: 0.8850
+
+Epoch 00009: LearningRateScheduler reducing learning rate to tf.Tensor(0.0067032008, shape=(), dtype=float32).
+Epoch 9/25
+200/200 [==============================] - 6s 29ms/step - loss: 0.3682 - sparse_categorical_accuracy: 0.8759 - val_loss: 0.3014 - val_sparse_categorical_accuracy: 0.8875
+
+Epoch 00010: LearningRateScheduler reducing learning rate to tf.Tensor(0.0060653067, shape=(), dtype=float32).
+Epoch 10/25
+200/200 [==============================] - 6s 28ms/step - loss: 0.3248 - sparse_categorical_accuracy: 0.8861 - val_loss: 0.3146 - val_sparse_categorical_accuracy: 0.8925
+
+Epoch 00011: LearningRateScheduler reducing learning rate to tf.Tensor(0.0054881168, shape=(), dtype=float32).
+Epoch 11/25
+200/200 [==============================] - 6s 28ms/step - loss: 0.3125 - sparse_categorical_accuracy: 0.8923 - val_loss: 0.2699 - val_sparse_categorical_accuracy: 0.8925
+
+Epoch 00012: LearningRateScheduler reducing learning rate to tf.Tensor(0.0049658534, shape=(), dtype=float32).
+Epoch 12/25
+200/200 [==============================] - 6s 31ms/step - loss: 0.2889 - sparse_categorical_accuracy: 0.9008 - val_loss: 0.2744 - val_sparse_categorical_accuracy: 0.9025
+
+Epoch 00013: LearningRateScheduler reducing learning rate to tf.Tensor(0.00449329, shape=(), dtype=float32).
+Epoch 13/25
+200/200 [==============================] - 6s 30ms/step - loss: 0.2729 - sparse_categorical_accuracy: 0.9106 - val_loss: 0.2814 - val_sparse_categorical_accuracy: 0.9112
+
+Epoch 00014: LearningRateScheduler reducing learning rate to tf.Tensor(0.004065697, shape=(), dtype=float32).
+Epoch 14/25
+200/200 [==============================] - 6s 32ms/step - loss: 0.2563 - sparse_categorical_accuracy: 0.9117 - val_loss: 0.2746 - val_sparse_categorical_accuracy: 0.9087
+
+Epoch 00015: LearningRateScheduler reducing learning rate to tf.Tensor(0.003678795, shape=(), dtype=float32).
+Epoch 15/25
+200/200 [==============================] - 6s 28ms/step - loss: 0.2456 - sparse_categorical_accuracy: 0.9120 - val_loss: 0.2899 - val_sparse_categorical_accuracy: 0.9038
+
+Epoch 00016: LearningRateScheduler reducing learning rate to tf.Tensor(0.0033287113, shape=(), dtype=float32).
+Epoch 16/25
+200/200 [==============================] - 5s 27ms/step - loss: 0.2392 - sparse_categorical_accuracy: 0.9172 - val_loss: 0.3042 - val_sparse_categorical_accuracy: 0.9025
+Epoch 1/10
+200/200 [==============================] - 5s 26ms/step - loss: 0.1600 - sparse_categorical_accuracy: 0.9448 - val_loss: 0.2791 - val_sparse_categorical_accuracy: 0.9087
+Epoch 2/10
+200/200 [==============================] - 5s 24ms/step - loss: 0.1327 - sparse_categorical_accuracy: 0.9552 - val_loss: 0.2757 - val_sparse_categorical_accuracy: 0.9150
+Epoch 3/10
+200/200 [==============================] - 5s 24ms/step - loss: 0.1223 - sparse_categorical_accuracy: 0.9577 - val_loss: 0.2805 - val_sparse_categorical_accuracy: 0.9187
+Epoch 4/10
+200/200 [==============================] - 5s 24ms/step - loss: 0.1140 - sparse_categorical_accuracy: 0.9614 - val_loss: 0.2857 - val_sparse_categorical_accuracy: 0.9137
+Epoch 5/10
+200/200 [==============================] - 5s 23ms/step - loss: 0.1088 - sparse_categorical_accuracy: 0.9638 - val_loss: 0.2852 - val_sparse_categorical_accuracy: 0.9125
+Epoch 6/10
+200/200 [==============================] - 5s 23ms/step - loss: 0.1040 - sparse_categorical_accuracy: 0.9655 - val_loss: 0.2915 - val_sparse_categorical_accuracy: 0.9137
+Epoch 7/10
+200/200 [==============================] - 5s 23ms/step - loss: 0.0993 - sparse_categorical_accuracy: 0.9677 - val_loss: 0.2875 - val_sparse_categorical_accuracy: 0.9150
+Epoch 8/10
+200/200 [==============================] - 4s 22ms/step - loss: 0.0954 - sparse_categorical_accuracy: 0.9686 - val_loss: 0.2985 - val_sparse_categorical_accuracy: 0.9175
+Epoch 9/10
+200/200 [==============================] - 4s 22ms/step - loss: 0.0919 - sparse_categorical_accuracy: 0.9705 - val_loss: 0.3075 - val_sparse_categorical_accuracy: 0.9162
+Epoch 10/10
+200/200 [==============================] - 5s 25ms/step - loss: 0.0891 - sparse_categorical_accuracy: 0.9722 - val_loss: 0.3102 - val_sparse_categorical_accuracy: 0.9225
+25/25 [==============================] - 4s 169ms/step - loss: 0.3357 - sparse_categorical_accuracy: 0.9087
+Accuracy:  0.9087499976158142
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-10 16:24:26.265817: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /Users/armandolarocca/Desktop/HW_iot/py37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2021-05-10 16:24:28.893325: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-10 16:24:28.893474: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-10 16:24:28.902026: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-10 16:24:28.902051: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 4.129ms.
+2021-05-10 16:24:28.902056: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.134ms.
+2021-05-10 16:24:29.008071: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-10 16:24:29.008100: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-10 16:24:29.030195: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (810).
+2021-05-10 16:24:29.030228: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite Dimension:43.09 kB
+Accuracy tflite model: 0.9075
+2021-05-10 16:24:29.678398: I tensorflow/core/grappler/devices.cc:78] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA or ROCm support)
+2021-05-10 16:24:29.678742: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-10 16:24:29.686563: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-10 16:24:29.686598: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 86 nodes (64), 81 edges (59), time = 3.427ms.
+2021-05-10 16:24:29.686611: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.128ms.
+2021-05-10 16:24:29.805654: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:313] Ignored output_format.
+2021-05-10 16:24:29.805680: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
+2021-05-10 16:24:29.825807: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/depthwise_conv2d_1/depthwise;StatefulPartitionedCall/sequential/depthwise_conv2d_1/depthwise1 because it has fewer than 1024 elements (810).
+2021-05-10 16:24:29.825839: I tensorflow/lite/tools/optimize/quantize_weights.cc:211] Skipping quantization of tensor sequential/dense/MatMul;StatefulPartitionedCall/sequential/dense/MatMul because it has fewer than 1024 elements (512).
+TFLite (Compressed) Dimension:19.59 kB
+
+
+python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 39.19ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 39.40ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 38.76ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 38.43ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 38.55ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 39.40ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 38.79ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 39.06ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.23ms
+Total Latency 39.59ms
+(py37) pi@raspberrypi:~/Iot/HW3/ex1 $ python kws_inference.py --model little.tflite --length 1000 --stride 620  --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.24ms
+Total Latency 38.67ms
