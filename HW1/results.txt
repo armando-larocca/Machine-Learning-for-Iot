@@ -1,3 +1,13 @@
+### Esercizio 4 ### 
+
+# Results dimension
+input folder size: 944.29kB
+
+
+Float (Humidity and temperature) --> 939.03kB
+Int (Humidity and temperature)  -->  938.98 kB
+
+
 ### Esercizio 5 ### 
 
 1.0856701100001374
