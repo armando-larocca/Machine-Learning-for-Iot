@@ -232,3 +232,21 @@ This property should not be used in TensorFlow 2.0, as updates are applied autom
 2021-05-09 14:57:50.057488: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
 TFLite Dimension:3715.37 kB
 Accuracy tflite model: 0.9425
+
+
+
+
+# COPERATIVE RESULTS 
+
+MODEL 1
+744
+Accuracy: 93.000 %
+MODEL 2
+756
+Accuracy: 94.500 %
+MODEL 3
+754
+Accuracy: 94.250 %
+MAJORITY VOTE
+757
+Accuracy: 94.625 %
