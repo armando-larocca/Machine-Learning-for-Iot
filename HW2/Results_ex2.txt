@@ -86,6 +86,9 @@ TFLite (Compressed) Dimension:19.02 kB
 
 
 
+---------------------------------------------------------------------------------
+
+
 
 
 ### MODEL B ### 
@@ -196,6 +199,12 @@ TFLite (Compressed) Dimension:32.62 kB
 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 Inference Latency 1.43ms
 Total Latency 41.84ms
+
+
+
+
+---------------------------------------------------------------------------------
+
 
 
 ### MODEL C ### 
