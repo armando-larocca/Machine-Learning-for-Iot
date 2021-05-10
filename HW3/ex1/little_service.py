@@ -151,7 +151,7 @@ input_shape = input_details[0]['shape']
 
 weight = 0
 invocations = 0
-treshold = 0.95
+treshold = 0.87
 url= "http://169.254.84.54:8080"
 running_corrects = 0
 total_elements = 0
