@@ -450,3 +450,13 @@ Total Latency 39.59ms
 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 Inference Latency 1.24ms
 Total Latency 38.67ms
+
+
+
+
+### BIG LITTLE MODEL CONSTRAINTS ### 
+
+['down', 'stop', 'right', 'left', 'up', 'yes', 'no', 'go']
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Accuracy : 93.62 %
+Communication Cost : 4.07 MB
