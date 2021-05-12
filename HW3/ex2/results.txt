@@ -114,6 +114,7 @@ Accuracy tflite model: 0.93
 
 
 
+------------------------------------------------------------------------------------
 
 
 
@@ -180,6 +181,10 @@ Accuracy tflite model: 0.945
 
 
 
+------------------------------------------------------------------------------------
+
+
+
 
 ### MODEL 3 ### 
 Epoch 1/8
@@ -232,6 +237,11 @@ This property should not be used in TensorFlow 2.0, as updates are applied autom
 2021-05-09 14:57:50.057488: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored drop_control_dependency.
 TFLite Dimension:3715.37 kB
 Accuracy tflite model: 0.9425
+
+
+
+
+------------------------------------------------------------------------------------
 
 
 
