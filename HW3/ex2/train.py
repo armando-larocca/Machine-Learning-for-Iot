@@ -156,17 +156,7 @@ MFCC_OPTIONS = {'frame_length': 640,
                 'num_mel_bins': 40,
                 'num_coefficients': 10
                 }
-'''
-elif args.version == "1":
-    MFCC_OPTIONS = {'frame_length':1000,
-                'frame_step': 600,
-                'mfcc': True,
-                'lower_frequency': 20,
-                'upper_frequency': 4000,
-                'num_mel_bins': 40,
-                'num_coefficients': 10
-                }
-'''
+
 
 generator = SignalGenerator(LABELS, 16000, **MFCC_OPTIONS)
 train_ds = generator.make_dataset(train_files, True)
@@ -254,7 +244,7 @@ elif args.version == "2":
         tf.keras.layers.Dense(units=8),
     ])
     
-    
+'''
 elif args.version == "3":
     filters = [ 2048, 1024]
     d_out = 0.4
@@ -295,7 +285,8 @@ elif args.version == "3":
         tf.keras.layers.Dropout(0.2),
         tf.keras.layers.Dense(units=8),
     ])
-    
+'''
+
 elif args.version == "4":
     filters = [256, 512, 1024]
     d_out = 0.3
