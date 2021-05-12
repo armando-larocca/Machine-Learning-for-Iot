@@ -9,6 +9,7 @@ import numpy as np
 import argparse
 import pathlib
 import os
+from datetime import datetime
 
 
 
@@ -73,17 +74,28 @@ class MyInference_client:
                 self.interpreter.invoke()
                 logits = self.interpreter.get_tensor(self.output_details[0]['index'])
                 #probs = tf.nn.softmax(logits)
-                probs = np.array(logits)
+                log = np.array(logits)
         
-                label = dict_msg['e'][1]['vd']
+                #label = dict_msg['e'][1]['vd']
+                timestamp = datetime.timestamp( datetime.now() )
+                device_name = "Device_" + self.topic2[-1]
+                
+                senml = {
+                    "bn" : device_name,
+                    "bt" : timestamp,
+                    "e" :[
+                    {"n": "log", "u":"/", "t":0, "vd": log.squeeze().tolist() }
+                    ]
+                }
         
                 # make out dictionay
                 #to_rasp_dict = {'probs': probs.numpy().squeeze().tolist(), 'label':label}
-                to_rasp_dict = {'probs': probs.squeeze().tolist(), 'label':label}
-                json_to_rasp = json.dumps(to_rasp_dict)
+                #to_rasp_dict = {'probs': probs.squeeze().tolist()}
+                #, 'label':label}
+                json_senml = json.dumps(senml)
                 
                 self.msg_inviati += 1
-                self._paho_mqtt.publish(self.topic2, json_to_rasp, 2)
+                self._paho_mqtt.publish(self.topic2, json_senml, 2)
                 
 
 
