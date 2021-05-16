@@ -260,3 +260,10 @@ Accuracy: 94.250 %
 MAJORITY VOTE
 757
 Accuracy: 94.625 %
+
+
+
+
+
+Majority vote accuracy: 94.625 %
+Sum vote accuracy: 95.375 %
