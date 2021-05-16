@@ -115,8 +115,11 @@ class MyCooperative_client:
             self.pred1 = []
             self.pred2 = []
             self.pred3 = []
+            self.logits1 = []
+            self.logits2 = []
+            self.logits3 = []
             self.labels = labels
-
+            
             self.running_corrects1 = 0
             self.running_corrects2 = 0
             self.running_corrects3 = 0
@@ -124,12 +127,10 @@ class MyCooperative_client:
             #self.rec2 = 0
             #self.rec3 = 0
             self.invio = 0
-            self.final_acc = 0
 
 
 
         def start (self):
-
             self._paho_mqtt.connect(self.messageBroker, 1883)
             self._paho_mqtt.loop_start()
             self._paho_mqtt.subscribe(self.topic0, 2)
@@ -169,6 +170,7 @@ class MyCooperative_client:
 
                 self.flag1 = True
                 preds = np.array(dict_msg['e'][0]['vd'])
+                self.logits1.append(preds)
                 c_pred = np.argmax(preds)
                 self.pred1.append(c_pred)
                 #self.labels.append(int(dict_msg['label']))
@@ -186,6 +188,7 @@ class MyCooperative_client:
                 
                 self.flag2 = True
                 preds = np.array(dict_msg['e'][0]['vd'])
+                self.logits2.append(preds)
                 c_pred = np.argmax(preds)
                 self.pred2.append(c_pred)
                 #self.rec2 += 1
@@ -202,6 +205,7 @@ class MyCooperative_client:
                 
                 self.flag3 = True
                 preds = np.array(dict_msg['e'][0]['vd'])
+                self.logits3.append(preds)
                 c_pred = np.argmax(preds)
                 self.pred3.append(c_pred)
                 #self.rec3 += 1
@@ -218,13 +222,34 @@ class MyCooperative_client:
             matrix = np.array(self.pred1)
             matrix = np.stack((matrix, self.pred2), axis=0)
             matrix = np.vstack((matrix, self.pred3))
+            maj_vote = 0
             
             for x in range(matrix.shape[1] ):
                 pred = max(dict(Counter(matrix[:,x])), key=dict(Counter(matrix[:,x])).get)
-    
-                if int(self.labels[x]) == pred :
-                    self.final_acc += 1
+            
+                if int(self.labels[x]) == int(pred) :
+                    maj_vote += 1
+                    
+            return maj_vote
           
+          
+        def other_vote(self):
+            matrix = []
+            matrix.append(self.logits1)
+            matrix.append(self.logits2)
+            matrix.append(self.logits3)
+            
+            matrix = np.array(matrix)
+            summa = np.sum(matrix, axis=0)
+            pred = np.argmax(summa,axis=1)
+
+            sum_vote = 0
+            for x in range(matrix.shape[1]):
+                if int(self.labels[x]) == int(pred[x]) :
+                    sum_vote += 1
+                    
+            return sum_vote
+                
                 
         def init(self):
             self._paho_mqtt.connect(self.messageBroker, 1883)
@@ -233,12 +258,12 @@ class MyCooperative_client:
             self._paho_mqtt.subscribe(self.topic2, 2)
             self._paho_mqtt.subscribe(self.topic3, 2)
 
+
         def loop(self):
             self._paho_mqtt.loop_forever()
                 
             
         def myPublish(self, message):
-            
             print("Sending sample n:{};".format( self.invio ))
             self._paho_mqtt.publish( self.topic0, message, 2 )
 
@@ -294,7 +319,6 @@ if __name__ == '__main__':
     }
 
     
-    
     generator = SignalGenerator(LABELS, 16000, **MFCC_OPTIONS)
     test_ds = generator.make_dataset(test_files, False)
     print(type(test_ds))
@@ -305,13 +329,12 @@ if __name__ == '__main__':
     for l in range(test_np.shape[0]):
         lab.extend(list(test_np[l,1,:]))
     
-    #print(len(lab))
+
     timestamp = datetime.timestamp( datetime.now() )
     device_name = 'raspberrypi'
     
     test = MyCooperative_client("Cooperative",lab)
     test.start()
-
 
     test_ds_tf = test_ds.unbatch().batch(1)
 
@@ -332,7 +355,9 @@ if __name__ == '__main__':
     time.sleep(4)
     
 
-    test.majority_vote()
+    maj_vote = test.majority_vote()
+    sum_vote = test.other_vote()
+    
     total_samples = len(test_ds)*32
         
     '''
@@ -346,9 +371,10 @@ if __name__ == '__main__':
     print(test.running_corrects3)
     print('Accuracy: %.3f %%'%( test.running_corrects3/total_samples*100))
     '''
-    print("MAJORITY VOTE")
-    #print(test.final_acc)
-    print('Accuracy: %.3f %%'%( test.final_acc/total_samples*100))
+
+    print("Majority vote accuracy: {} %".format( maj_vote/total_samples*100 ))
+    print("Sum vote accuracy: {} %".format( sum_vote/total_samples*100 ))
+    
     test.stop()
     print("Done")
 
